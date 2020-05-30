@@ -1,0 +1,21 @@
+<%- include('../includes/start.ejs') %>
+<link rel="stylesheet" href="/css/shop.css" />
+<%- include('../includes/navigation.ejs') %>
+<main>
+    <div class="product-details-container">
+        <!-- <div class="product-card"> -->
+        <span class="product-detail-title"><%= product.title %></span>
+        <hr />
+        <img
+            src="https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.png?width=300&height=315&ext=.png"
+            alt=""
+        />
+        <div class="product-price">$<%= product.price %></div>
+        <div class="product-description">
+            <%= product.description %>
+        </div>
+        <%- include('../includes/post-to-cart.ejs', {product: product}) %>
+        <!-- </div> -->
+    </div>
+</main>
+<%- include('../includes/end.ejs') %>
